@@ -4,7 +4,8 @@ import secrets
 from urllib.parse import parse_qs
 from flask import Flask, request, send_from_directory, redirect, make_response
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder="www", static_url_path="")
+
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 WWW_DIR = os.path.join(BASE_DIR, "www")
